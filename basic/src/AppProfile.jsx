@@ -1,10 +1,11 @@
 import './App.css';
+import Profile from './components/Profile';
 
 function AppProfile() {
-  const name = 'eee'
+
   return (
     <>
-      
+      <Profile></Profile>
     </>
   );
 }
