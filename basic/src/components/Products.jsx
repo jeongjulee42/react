@@ -4,6 +4,13 @@ import React, {useState} from 'react';
 export default function Products() {
     const [count, setCount] = useState(0);
     const [products, setProducts] = useState([]);
+
+    fetch('data/products.json')
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        })
+
     return (
         <>
             <ul>
