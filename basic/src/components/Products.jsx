@@ -1,15 +1,21 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 
 export default function Products() {
     const [count, setCount] = useState(0);
     const [products, setProducts] = useState([]);
 
-    fetch('data/products.json')
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-        })
+    useEffect(() => {
+        fetch('data/products.json')
+            .then(res => res.json())
+            .then(data => {
+                console.log('data loading');
+                setProducts(data);
+            });
+        return () => {
+            console.log('clear!!');
+        }
+    }, [])
 
     return (
         <>
