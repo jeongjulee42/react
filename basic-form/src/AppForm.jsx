@@ -10,6 +10,8 @@ export default function AppForm() {
     const { name, value } = e.target;
     setFrom({ ...form, [name]: value });
   };
+
+  
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor='name'>이름:</label>
