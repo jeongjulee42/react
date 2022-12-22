@@ -34,9 +34,9 @@ export default function AppMentorsButton() {
           </li>
         ))}
       </ul>
-      <button onClick={handleUpdate}>멘토의 이름을 바꾸기</button>
-      <button onClick={handleAdd}>멘토 추가하기</button>
-      <button onClick={handleDelete}>멘토 삭제하기</button>
+      <Button text='멘토 이름 바꾸기' onClick={handleUpdate} />
+      <Button text='삭제하기' onClick={handleDelete} />
+      <Button text='멘토 추가하기' onClick={handleAdd} />
     </div>
   );
 }
